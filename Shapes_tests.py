@@ -65,7 +65,13 @@ def test_SquareArea():
     print_test_results(blank, desc, expected, actual)
 
 def test_RectangleArea():
-    pass
+    rect1 = shp.Rectangle()
+    rect1.width = 4
+    rect1.height = 2
+    expected = (rect1.height * rect1.width)
+    desc = "Returns area of a rectangle from length and height."
+    actual = rect1.area
+    print_test_results(blank, desc, expected, actual)
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to

@@ -41,7 +41,7 @@ class Circle(object):
         return (math.pi * self.__radius ** 2)
         return self.__area
 
-class Square:
+class Square(object):
     @property
     def side_length(self):
         return self.__side_length
@@ -58,8 +58,33 @@ class Square:
         return (self.side_length ** 2)
         return self.__area
 
-class Rectangle:
-    pass
+class Rectangle(object):
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self,width):
+        if width <=0:
+            raise ValueError, "Width must be greater than 0!"
+        else:
+            self.__width = width
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self,height):
+        if height <=0:
+            raise ValueError, "Height must be greater than 0!"
+        else:
+            self.__height = height
+
+    @property
+    def area(self):
+        return (self.__height * self.__width)
+        return self.__area
 
 
 if __name__ == '__main__':
