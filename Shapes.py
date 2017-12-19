@@ -41,6 +41,9 @@ class Circle(object):
         return (math.pi * self.__radius ** 2)
         return self.__area
 
+    def __str__(self):
+        return "Circle area with radius %s is %f." % (self.radius, self.area)
+
 class Square(object):
     @property
     def side_length(self):
@@ -57,6 +60,9 @@ class Square(object):
     def area(self):
         return (self.side_length ** 2)
         return self.__area
+
+    def __str__(self):
+        return "Square area with side length %s is %f." % (self.side_length, self.area)
 
 class Rectangle(object):
     @property
@@ -86,6 +92,8 @@ class Rectangle(object):
         return (self.__height * self.__width)
         return self.__area
 
+    def __str__(self):
+        return "Rectangle area with width %s and height %s is %f." % (self.width, self.height, self.area)
 
 if __name__ == '__main__':
     main()
