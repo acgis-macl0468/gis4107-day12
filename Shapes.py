@@ -39,10 +39,24 @@ class Circle(object):
     @property
     def area(self):
         return (math.pi * self.__radius ** 2)
-        #return self.__area
+        return self.__area
 
 class Square:
-    pass
+    @property
+    def side_length(self):
+        return self.__side_length
+
+    @side_length.setter
+    def side_length(self,side_length):
+        if side_length <=0:
+            raise ValueError, "Side must be greater than 0!"
+        else:
+            self.__side_length = side_length
+
+    @property
+    def area(self):
+        return (self.side_length ** 2)
+        return self.__area
 
 class Rectangle:
     pass

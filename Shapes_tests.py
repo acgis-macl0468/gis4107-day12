@@ -56,8 +56,16 @@ def test_circleArea():
     actual = circle1.area
     print_test_results(blank, desc, expected, actual)
 
+def test_SquareArea():
+    square1 = shp.Square()
+    square1.side_length = 3
+    expected = (square1.side_length ** 2)
+    desc = "Returns area of square from side length."
+    actual = square1.area
+    print_test_results(blank, desc, expected, actual)
 
-
+def test_RectangleArea():
+    pass
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to
