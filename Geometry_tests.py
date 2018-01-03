@@ -11,6 +11,8 @@
 
 import sys
 import inspect
+import Geometry as geo
+
 
 # Add import statement for the module under test as follows:
 # import module_under_test as alias
@@ -42,6 +44,24 @@ def template_for_test_functions():
 
 # Create test functions here using the template_for_test_functions above.
 # The name of the test functions needs to begin with "test"
+def test_Point():
+    point1 = geo.Point(1, 1)
+
+    expected = (1, 1)
+    desc = "Returns point location."
+    actual = (point1.x, point1.y)
+    print_test_results(geo.func, desc, expected, actual)
+
+def test_Line():
+    fromPoint = geo.Point(1, 1)
+    toPoint = geo.Point(4, 5)
+    line1 = geo.Line(fromPoint, toPoint)
+
+    expected = 5
+    desc = "Returns line length."
+    actual = line1.length
+    print_test_results(geo.func, desc, expected, actual)
+
 
 # ------------------------------------------------------------------------------
 # Test template helper functions.  Code in this section should not need to
